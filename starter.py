@@ -11,7 +11,7 @@ async def main():
     client = await Client.connect("localhost:7233")
     result = await client.execute_workflow(
         IngestWorkflow.run,
-        [f"chunk-{i}" for i in range(1, 21)],
+        [f"chunk-{i}" for i in range(1, 6)],
         id=f"ingest-{uuid.uuid4()}",
         task_queue="ingest-queue",
     )
